@@ -1,0 +1,10 @@
+#!/usr/bin/env io
+
+for(a, 0, 10, 
+    a println
+)
+
+//Example with a step:
+
+for(x, 0, 10, 3, x println)
+
