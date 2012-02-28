@@ -20,6 +20,49 @@ Vehicle noexistingslot = "This won't work"
 ・オブジェクトは自分が応答できないメッセージを自分のプロトタイプに送信する。
 
 
+確認してみよう
+
+    * Ioの問題点
+          o 「"Io言語" 問題点」で探したら7つの言語7つの世界関連のものしか引っかからない
+          o 日本語の情報が少ない「"Io言語" 問題点」でググったら235件…
+                + Io プログラミングガイド日本語あった!
+          o 英語でも情報がすくない。Newest 'iolanguage' Questions - Stack Overflow
+    * 質問に答えてくれるIoコミュニティ
+          o iolanguage : Io
+          o no title
+          o 日本のユーザー会見つけれなかった。
+    * Ioのイディオムに関するスタイルガイド
+          o Io Programming/Io Style Guide - Wikibooks, open books for an open world
+          o io-fans: Homeにチュートリアルへのリンク等があった
+
+確認してみよう
+
+    * Ioは強く型付けされた言語か? 弱く型付けされた言語か?
+          o Ioは強く型付けされた言語。1 + "one"はエラー
+    * 0、空文字列、nilは真か偽か?
+          o 0、空文字列はtrue、nilはfalse
+          o (true and 0) println; (true and "") println; (true and nil) println
+    * プロトタイプのスロットの確認
+          o proto slotNames、protoでプロトタイプを取得してslotNamesメッセージ送る
+    * =、:=、::=の違い
+          o a = 1はupdateSlot("a", 1)、a := 1はsetSlot("a", 1)、 a ::= 1はnewSlot("a", 1)にコンパイルされる
+          o =はスロットに値を入れる。スロットが存在していない場合例外を投げる
+          o :=はスロットを作成して値を設定。
+          o ::=はスロットとセッター(fooだったらsetFoo)を作成して値を設定
+
+試してみよう
+
+    * ファイルからIoのプログラムを実行
+          o $ io -hでヘルプ見れる。普通にファイル名渡せばいいみたい。
+          o $ echo '"Hello, Io!" println' > day1.io; io day1.io
+    * スロットの名前を指定して格納されているコードを実行
+
+Io> a getSlot("fuga") call
+fuga
+==> fuga
+Io> 
+
+
 
 
 
