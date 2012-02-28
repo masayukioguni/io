@@ -1,0 +1,12 @@
+メモ
+Vehicle description := "Something t otake you far away"
+:= スロットへの代入。スロットが存在しない場合新規作成
+Vehicle noexistingslot = "This won't work"
+=スロットへの代入。スロットが存在しない場合例外
+
+・オブジェクトは他のオブジェクトを複製(クローニング)することによって作成する。
+・オブジェクトはスロットの集まりである。
+・スロットの値を取得するにはメッセージを送信する。
+
+
+
